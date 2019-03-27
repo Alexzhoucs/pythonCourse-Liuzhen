@@ -1,12 +1,13 @@
 # 杨辉三角
 # 行数
-numberOfLine = int(input("Please input the number of lines:"))
+numberOfLine = 10    #要求输入而不是提前规定
+
 
 lastLine = []
 thisLine = []
 
-for line in range(1, numberOfLine + 1):       # 当前行数
-
+for line in range(numberOfLine):   #可以用range(1,numberOfLine+1)，就可以不用在循环里+1了，减少可能发生的错误，还有变量的大小写要统一，要么都大写，要么都小写。
+    line = line + 1             # 当前行数
     for i in range(numberOfLine - line):
         print("\t", end="")     # 1 打出总行数 - 当前行数个tab
 
@@ -32,6 +33,8 @@ for line in range(1, numberOfLine + 1):       # 当前行数
 
 
 
+#算法有点繁杂，可以看之后给出的示例，写注释是一个好习惯，希望保持
 
+#10 20190327 20:53
 
 
