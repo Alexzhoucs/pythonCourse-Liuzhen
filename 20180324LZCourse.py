@@ -14,9 +14,8 @@ print(d)
 # 原生字符串
 b = r"adsfg"
 
-
 # 复数
-a = complex(1+2j)
+a = complex(1 + 2j)
 
 # 列表
 a = [0, 1, 2, 3]
@@ -63,24 +62,23 @@ elif a is b:
     print(a)
 
 # for
-for i in range(2,10,3):
+for i in range(2, 10, 3):
     print(i)
 
 a = "abcdefg"
 for i in a:
     print(i)
 
-a = {1:2, 3: 4}
+print("---")
+a = {1: 256, 3: 4}
 for i in a:
     print(i, a[i])
 
-# 定义函数
-def devide(a,b):
-    p = a/b
-    q = a//b
-    s = a%b
 
+# 定义函数
+def devid(a, b):
+    p = a / b
+    q = a // b
+    s = a % b
 
 # 文件、上下文管理器
-
-
