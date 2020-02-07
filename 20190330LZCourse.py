@@ -113,7 +113,7 @@ print("remove")
 try:
     s.remove(0)
 except Exception:
-    print("Exception!")         # todo: find the exception name
+    print("Exception!")  # todo: find the exception name
 
 print(s)
 s.insert(3, 4)
@@ -121,4 +121,36 @@ print("insert")
 print(s)
 print(s.pop())
 print(s)
+s.reverse()
+print(s)
+s.sort()
+print(s)
+s.sort(reverse=True)
+print(s)
+s.clear()
+print(s)
+
+# 字典操作
+print("\n\n-----------字典操作")
+d = {1: 'a', 2: 'b', 3: 'c'}
+print(d)
+d[4] = 'd'
+print(d)
+print(d.get(2))
+n = d.items()
+print(type(n))          # 迭代器
+print(n)
+for i in n:
+    print(i)
+print(d)
+try:
+    n = d.popitem()
+except Exception:
+    print("except")
+
+print(n)
+print(d.pop())      # todo: d.pop()  的问题
+print(d.popitem())
+
+
 

@@ -40,7 +40,7 @@ print(a, end='')
 print(a)
 f = open("1.txt", 'w')
 print(a, file=f)
-
+f.close()
 # 字符串格式化
 
 
