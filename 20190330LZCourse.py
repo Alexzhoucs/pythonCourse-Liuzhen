@@ -80,28 +80,6 @@ print(a)
 a = [i for i in p if i not in q]
 print(a)
 
-# 字符串操作
-print("\n\n-----------字符串操作")
-s = "abc def abc"
-print(s.count('a'))
-print(s.find('b'))
-print(s.find('v'))
-print(s.index('c'))
-try:
-    print(s.index('v'))
-except ValueError:
-    print("ERROR: ValueError - can not find this letter")
-
-# upper lower
-print(s.upper())
-print(s.lower())
-
-# split replace
-print(s.split(' '))
-print(type(s))
-print(type(s.split()))
-print(s.replace('a', 'r'))
-
 # 列表操作
 print("\n\n--------------列表操作")
 s = [1, 2, 3, 4, 5, 6]
@@ -138,19 +116,55 @@ d[4] = 'd'
 print(d)
 print(d.get(2))
 n = d.items()
-print(type(n))          # 迭代器
+print(type(n))  # 迭代器
 print(n)
 for i in n:
     print(i)
-print(d)
-try:
-    n = d.popitem()
-except Exception:
-    print("except")
-
+print(type(d))
 print(n)
-print(d.pop())      # todo: d.pop()  的问题
+print("---------")
+print(d.pop(2))  # 字典的 pop() 方法必须有参数
 print(d.popitem())
+print(d)
 
+# 字符串操作
+print("\n\n-----------字符串操作")
+s = "abc def abc"
+print(s.count('a'))
+print(s.find('b'))
+print(s.find('v'))
+print(s.index('c'))
+try:
+    print(s.index('v'))
+except ValueError:
+    print("ERROR: ValueError - can not find this letter")
 
+# upper lower
+print(s.upper())
+print(s.lower())
 
+# split replace
+print(s.split(' '))
+print(type(s))
+print(type(s.split()))
+print(s.replace('a', 'r'))
+
+# 字符串格式化
+print("\n-----------字符串格式化")
+a = 34
+b = 21.356543359
+c = "hello"
+d = {'x': 12, 'y': "cdefg", 'z': 23.23465778765}
+e = 34567654390654654896654
+
+s = "a is %d or %10d" % (a, a)
+print(s)
+s = "%+010d \t %.4f %.4g %e" % (a, b, b, b)  # g 有效数字
+print(s)
+s = "%(x)-10d \t %(z).8g" % d  # 符号左对齐
+print(s)
+s = "%8.4s %0.4s %s" % (c, c, d['y'])
+print(s)
+s = "%*.*f" % (5, 3, b)  # 共5位，小数点后三位
+print(s)
+# 更复杂的可用format
