@@ -1,3 +1,6 @@
+import logging
+import traceback
+
 # 异常处理
 print("----------异常处理")
 a = -10
@@ -88,10 +91,13 @@ s.append(3)
 print(s)
 print(s.count(3))
 print("remove")
+print("---------------------------------------")
 try:
     s.remove(0)
-except Exception:
-    print("Exception!")  # todo: find the exception name
+except ValueError as ex:
+    traceback.print_exc()
+    logging.exception("ER")              # 两种方法作用相同
+    print(ex)
 
 print(s)
 s.insert(3, 4)
