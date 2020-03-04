@@ -155,7 +155,7 @@ print(type(s))
 print(type(s.split()))
 print(s.replace('a', 'r'))
 
-# 字符串格式化
+# 字符串格式化输出
 print("\n-----------字符串格式化")
 a = 34
 b = 21.356543359

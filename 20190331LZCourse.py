@@ -1,5 +1,7 @@
 # 函数
 print("---------------函数")
+
+
 def multi(x, y):
     return x ** y
 
@@ -39,3 +41,5 @@ def multi3(x, y=2):
 print(multi3(4))
 print(b)
 
+# 装饰器
+print("\n\n---------------装饰器")
